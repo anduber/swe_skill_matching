@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
       target: runtime
     image: swe_skill_matching:runtime
-    container_name: crm_contact_search_after
+    container_name: swe_skill_matching_app
     stdin_open: true
     tty: true
 
@@ -17,6 +17,6 @@ services:
       dockerfile: Dockerfile
       target: build
     image: swe_skill_matching:build
-    container_name: crm_contact_search_tests
+    container_name: swe_skill_matching_tests
     command: ["dotnet", "test", "tests/tests.csproj", "-c", "Release", "-v", "minimal"]
     working_dir: /src

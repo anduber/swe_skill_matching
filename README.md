@@ -24,8 +24,12 @@ dotnet run --project swe_skill_matching.csproj
 dotnet run --project repository_before/repository_before.csproj
 dotnet run --project repository_after/repository_after.csproj
 
-# Execute tests
+# Execute tests (locally)
 dotnet test tests/tests.csproj
+
+# Execute tests via Docker (before/after suites share the same command)
+docker compose run --rm tests -- dotnet test tests/tests.csproj --filter RepositoryBeforeEMPerformanceTest
+docker compose run --rm tests -- dotnet test tests/tests.csproj --filter RepositoryAfterEMPerformanceTest
 ```
 
 ## Tasks

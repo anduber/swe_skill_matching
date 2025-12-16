@@ -1,6 +1,4 @@
-﻿using static repository_before.CrmContactSearch;
-
-namespace RepositoryAfter;
+﻿namespace RepositoryAfter;
 
 internal static class Program
 {

@@ -25,7 +25,6 @@ namespace repository_before
             var allEmployees = await _context.GetAllEmployeesAsync(cancellationToken); // 10,000+ employees
             var matches = new List<EmployeeMatch>();
 
-            // Score every employee fully in memory to mimic the intentionally inefficient approach from CrmContactSearch.
             foreach (var employee in allEmployees)
             {
                 int matchScore = 0;
